@@ -57,7 +57,7 @@ function App() {
       setCount(count = 3)
       setOperator(op.target.value)
     }
-    else  alert("Enter Digit before calculation")
+    else alert("Enter Digit before calculation")
   }
   const clickDecimal = () => {
     if (!display.includes('.')) {
@@ -74,7 +74,7 @@ function App() {
         setOperator(op.target.value)
       }
     }
-    else  alert("Enter Digit before calculation")
+    else alert("Enter Digit before calculation")
   }
   const clickMinus = (op) => {
     if (display !== "") {
@@ -83,7 +83,7 @@ function App() {
       setCount(count = 2)
       setOperator(op.target.value)
     }
-    else  alert("Enter Digit before calculation")
+    else alert("Enter Digit before calculation")
   }
   const division = (op) => {
     if (display !== "") {
@@ -92,7 +92,7 @@ function App() {
       setCount(count = 4)
       setOperator(op.target.value)
     }
-    else  alert("Enter Digit before calculation")
+    else alert("Enter Digit before calculation")
   }
   //  ___________ Equal Functioin __________
   const clickEqual = () => {
@@ -124,58 +124,55 @@ function App() {
 
   return (
     <>
-      <div className=' max-w-[60%] min-w-[23%] mx-auto p-3 bg-gray-300 shadow-md rounded-md mt-10'>
+      <div className=' border-2 border-green-600 w-full h-full md:max-w-[40%]  mx-auto p-3 bg-gray-300 shadow-md rounded-md mt-12'>
 
         <div id='screen'>
           <input type="text" className='p-2 bg-slate-50 w-[100%] h-[2rem] rounded-md ' placeholder='0' value={display} readOnly />
         </div>
 
-        <div className='grid grid-cols-4 gap-4 mx-1 my-3 w-[97%] h-[43%] '>
+        <div className='grid grid-cols-4 gap-4 pt-4 my-3 w-[80%] mx-auto h-[43%] md:w-[88%] '>
 
-          <input type='button' value="7" onClick={clickBtn7} style={{backgroundColor:'#B2BEB5' , padding: '5px'}} />
-          <input type='button' value="8" onClick={clickBtn8} style={{backgroundColor:'#B2BEB5' , padding: '5px'}} />
+          <input type='button' value="7" onClick={clickBtn7} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
+          <input type='button' value="8" onClick={clickBtn8} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type='button' value="9" onClick={clickBtn9} style={{backgroundColor:'#B2BEB5' , padding: '5px'}} />
+          <input type='button' value="9" onClick={clickBtn9} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="C" onClick={clickBtnC} style={{backgroundColor:'#EE4B2B' , padding: '5px'}}/>
+          <input type="button" value="C" onClick={clickBtnC} style={{ backgroundColor: '#EE4B2B', padding: '5px' }} />
 
-          <input type="button" value="4" onClick={clickBtn4} style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="4" onClick={clickBtn4} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="5" onClick={clickBtn5} style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="5" onClick={clickBtn5} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="6" onClick={clickBtn6} style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="6" onClick={clickBtn6} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="/" onClick={division} style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="/" onClick={division} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="1" onClick={clickBtn1} style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/> 
+          <input type="button" value="1" onClick={clickBtn1} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-         <input type="button" value="2" onClick={clickBtn2} style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="2" onClick={clickBtn2} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="3" onClick={clickBtn3} style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="3" onClick={clickBtn3} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="*" onClick={multiplication}  style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="*" onClick={multiplication} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="0" onClick={click0}  style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="0" onClick={click0} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="Clear" onClick={clearAll}  style={{backgroundColor:'#B2BEB5' , padding: '5px 8px 8px 5px'}}/>
+          <input type="button" value="Clear" onClick={clearAll} style={{ backgroundColor: '#B2BEB5', padding: '5px 8px 8px 5px' }} />
 
-          <input type="button" value="." onClick={clickDecimal}  style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/>
+          <input type="button" value="." onClick={clickDecimal} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <input type="button" value="+" onClick={clickPlus}  style={{backgroundColor:'#B2BEB5' , padding: '5px'}}/> 
+          <input type="button" value="+" onClick={clickPlus} style={{ backgroundColor: '#B2BEB5', padding: '5px' }} />
 
-          <div className=' flex flex-row justify-between w-[14.7rem]'>
+          <div className='flex flex-row gap-4 w-[15rem]'>
 
-            <div className=' bg-green-600 w-[75%] text-center text-white p-[5px] font-semibold'>
-              <button type='button' onClick={clickEqual} >Equal To</button>
-            </div>
+            <input type="button" value="Equal To" onClick={clickEqual} className='bg-green-500 font-semibold text-white px-10 md:px-4 md:py-2 w-[100%] md:w-[90%]' />
 
-            <div className=' flex justify-center text-center font-semibold'>
-              <input type="button" value="-" onClick={clickMinus}  style={{backgroundColor:'#B2BEB5' , padding: '4px 20px'}}/>
-            </div>
+            <input type="button" value="-" onClick={clickMinus} style={{ backgroundColor: '#B2BEB5' }} className=' font-semibold w-[50%] py-1 px-8' />
 
           </div>
 
         </div>
+
       </div>
 
     </>
